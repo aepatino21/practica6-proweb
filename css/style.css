@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body {
+    background-color: #DCD1D7
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 42em;
+    gap: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10em;
+    border: 2px solid black;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 2px 2px 10px #0D1321;
+}
+
+#main-container h1 {
+    font-family: "Anton";
+    font-size: 38px;
+    padding-top: 1.5em;
+    color: #0D1321;
+}
+
+#main-container input {
+    width: 30em;
+    height: 1.8em;
+    background-color: #D7FEEB;
+    border: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-family: "Pacifico";
+    text-indent: 1.5em;
+}
+
+#main-container input::placeholder {
+    color: #525252;
+    font-style: italic;
+    font-family: "Pacifico";
+}
+
+#main-container input:focus {
+    outline: none;
+}
+
+#add-btn {
+    height: 1.8em;
+    background-color: #337357;
+    color: white;
+    border: 0px;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 6em;
+    font-family: "Anton";
+    transition: color 0.5s;
+}
+
+#add-btn:hover {
+    color: #002921;
+}
+
+#clear-btn {
+    margin-bottom: 30px;
+    border: 0px;
+    cursor: pointer;
+    color: #FE4A49;
+    font-family: "Anton";
+    transition: color 0.4s;
+}
+
+#clear-btn:hover {
+    color: #650101;
+}
+
+#task-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.task {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 38em;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: color 0.5s;
+}
+
+.task:hover, .task label:hover {
+    background-color: #D7FEEB;
+}
+
+.task input[type="checkbox"] {
+    cursor: pointer;
+    flex-basis: 20%;
+    accent-color: #8CD790;
+}
+
+.task label {
+    font-family: "Pacifico";
+    flex-basis: 50%;
+}
+
+.task .edit-icon {
+    cursor: pointer;
+    color: #337357;
+    font-size: 25px;
+    transition: color 0.4s;
+    flex-basis: 10%;
+}
+
+.task .delete-icon {
+    cursor: pointer;
+    color: #FE4A49;
+    font-size: 25px;
+    transition: color 0.4s;
+    flex-basis: 10%;
+}
+
+.edit-icon:hover {
+    color: #002921;
+}
+
+.delete-icon:hover {
+    color: #650101;
+}
+
+/*
+TODO 4: Add a script to mark the task as completed when the checkbox is checked
+TODO 5: Add a script to delete the task when the delete icon is clicked
+TODO 6: Add a script to delete all tasks in the list when the clear button is clicked.
+TODO 7: Add a script to handle events when the add button is clicked and there is no content in the input field
+TODO 8: Add a script to handle events when a task is added or deleted from the list.
+TODO 9: Add responsiveness to the page.
+TODO X: Add a script to edit the task when the edit icon is clicked (Optional)
+*/

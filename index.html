@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ángel Patiño">
+    <meta name="description" content="Lista de Tareas realizada con HTML, CSS y JS">
+    <title>Lista de Pendientes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/icono_todo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8fc56b0b18.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <div id="main-container">
+            <h1>Lista de Pendientes</h1>
+            <div id="task-input">
+                <form>
+                    <input type="text" name="text-input" id="text-input" placeholder="Ej. Estudiar Cálculo Numérico"><button onclick="addTask()" type="button" id="add-btn">Agregar</button>
+                </form>
+            </div>
+            <div id="task-container">
+                
+            </div>
+            <button id="clear-btn">Limpiar lista</button>
+        </div>
+    </main>
+    <script src="script/script.js"></script>
+</body>
+</html>
