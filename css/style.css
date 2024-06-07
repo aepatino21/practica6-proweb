@@ -108,7 +108,7 @@ body {
 .task input[type="checkbox"] {
     cursor: pointer;
     flex-basis: 20%;
-    accent-color: #8CD790;
+    accent-color: #337357;
 }
 
 .task label {
