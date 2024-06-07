@@ -9,17 +9,6 @@ function createTaskContainer() {
     return task;
 }
 
-// Función para tachar una tarea
-function checkLabel(checkbox) {
-    let label = document.querySelector(`label[for="${checkbox.className}"]`);
-    if (checkbox.checked) {
-        label.style.textDecoration = "line-through";
-    } else {
-        label.style.textDecoration = "none";
-    }
-}
-
-
 // Función para agregar una tarea
 function addTask() {
     if (taskInput.value === '') {
@@ -35,11 +24,19 @@ function addTask() {
         let checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.className = `task-${document.getElementsByClassName("task").length}`;
-        checkbox.onclick = () => checkLabel(checkbox);
+        // checkbox.onclick = () => checkLabel(checkbox);
 
         let label = document.createElement("label");
         label.innerHTML = taskInput.value;
         label.setAttribute("for", checkbox.className);
+
+        checkbox.onclick = function(){
+            if (checkbox.checked) {
+                label.style.textDecoration = "line-through";
+            } else {
+                label.style.textDecoration = "none";
+            }
+        }
 
         task.append(checkbox, label, editIcon, deleteIcon);
         taskContainer.append(task);
