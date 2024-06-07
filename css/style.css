@@ -141,10 +141,20 @@ body {
     color: #650101;
 }
 
+@media screen and (max-width: 767px) {
+    #main-container {
+        width: 30em;
+    }
+
+    #main-container input {
+        width: 18em;
+    }
+
+    .task {
+        width: 25em;
+    }
+}
+
 /*
-TODO 5: Add a script to delete the task when the delete icon is clicked
-TODO 6: Add a script to delete all tasks in the list when the clear button is clicked.
-TODO 7: Add a script to handle events when the add button is clicked and there is no content in the input field
-TODO 8: Add a script to handle events when a task is added or deleted from the list.
 TODO 9: Add responsiveness to the page.
 */
