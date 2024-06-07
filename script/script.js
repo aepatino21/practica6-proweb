@@ -1,7 +1,7 @@
 // Selección de elementos
 const taskInput = document.getElementById("text-input");
 const taskContainer = document.getElementById("task-container");
-window.onload = loadData();
+const deleteBtn = document.getElementById("clear-btn");
 
 // Función para crear un container de tarea
 function createTaskContainer() {
@@ -19,13 +19,16 @@ function addTask() {
 
         let editIcon = document.createElement("i");
         editIcon.className = "edit-icon fa-solid fa-pen-to-square";
+
         let deleteIcon = document.createElement("i");
         deleteIcon.className = "delete-icon fa-solid fa-trash";
+        deleteIcon.onclick = function() {
+            taskContainer.removeChild(task);
+        }
 
         let checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.className = `task-${document.getElementsByClassName("task").length}`;
-        // checkbox.onclick = () => checkLabel(checkbox);
 
         let label = document.createElement("label");
         label.innerHTML = taskInput.value;
@@ -38,28 +41,23 @@ function addTask() {
             } else {
                 label.style.textDecoration = "none";
             }
-            saveData();
         }
 
         task.append(checkbox, label, editIcon, deleteIcon);
         taskContainer.append(task);
         taskInput.value = '';
     }
-    saveData();
 }
 
-// Función para eliminar una tarea
-
-
-// Función para eliminar toda la lista de tareas
-
-
-// Función para almacenar tareas en memoria
-function saveData() {
-    localStorage.setItem("data", taskContainer.innerHTML);
-}
-
-// Funcion para cargar tareas encontradas en memoria
-function loadData() {
-    taskContainer.innerHTML = localStorage.getItem("data");
+// Funcion para eliminar todas las tareas de la lista
+function deleteAll() {
+    let task = taskContainer.lastChild;
+    if (task === null) {
+        alert("No hay elementos en la lista!");
+    } else {
+        while(task) {
+            taskContainer.removeChild(task);
+            task = taskContainer.lastChild;
+        }
+    }
 }
